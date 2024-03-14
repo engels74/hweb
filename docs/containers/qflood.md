@@ -3,11 +3,17 @@ hide:
   - toc
 ---
 
+<div class="image-logo"><img src="/img/image-logos/flood.svg" alt="logo"></div>
+
 --8<-- "includes/header-links.md"
 
 !!! question "What is this?"
 
-    A docker image with rTorrent and the Flood UI, also optional WireGuard VPN support.
+    This is a fork of Hotio's [rflood](https://hotio.dev/containers/rflood) Docker image, that uses qBittorrent instead of rtorrent. The qflood image has both "releases" and "nightly support". The included [qBittorrent](https://github.com/userdocs/qbittorrent-nox-static) uses libtorrent v2.x.
+
+???+ info "What is nightly?"
+
+    Nightly means it updates automatically after a successful run of [this workflow file](https://github.com/jesec/flood/actions/workflows/publish-rolling.yml). This means that whenever the official flood repository receives a push commit, this docker image should automatically be updated. All thanks to hotio's brilliant setup.
 
 ## Starting the container
 
@@ -15,37 +21,37 @@ hide:
 
     ```shell linenums="1"
     docker run --rm \
-        --name rflood \
+        --name qflood \
+        -p 8080:8080 \
         -p 3000:3000 \
-        -p 5000:5000 \
         -e PUID=1000 \
         -e PGID=1000 \
         -e UMASK=002 \
         -e TZ="Etc/UTC" \
-        -e FLOOD_AUTH="false" \
+        -e FLOOD_AUTH="true" \
         -e ARGS="" \
         -e FLOOD_ARGS="" \
         -v /<host_folder_config>:/config \
         -v /<host_folder_data>:/data \
-        ghcr.io/hotio/rflood
+        ghcr.io/engels74/qflood
     ```
 
 === "compose"
 
     ```yaml linenums="1"
     services:
-      rflood:
-        container_name: rflood
-        image: ghcr.io/hotio/rflood
+      qflood:
+        container_name: qflood
+        image: ghcr.io/engels74/qflood
         ports:
+          - "8080:8080"
           - "3000:3000"
-          - "5000:5000"
         environment:
           - PUID=1000
           - PGID=1000
           - UMASK=002
           - TZ=Etc/UTC
-          - FLOOD_AUTH=false
+          - FLOOD_AUTH=true
           - ARGS
           - FLOOD_ARGS
         volumes:
@@ -58,9 +64,5 @@ hide:
 ## Changing the WebUI port
 
 Under certain circumstances it's required to run the WebUI on a different internal port, you can do that by modifying the environment variable `WEBUI_PORTS` accordingly. It should be in the format `xxxx/tcp,xxxx/udp`, take a look at the default with `docker logs` (variable is printed at container start) or `docker inspect`.
-
-## XML-RPC
-
-On port `5000` runs Nginx exposing `/RPC2`. Default credentials are shown on first start, `localhost` doesn't need credentials.
 
 --8<-- "includes/wireguard.md"

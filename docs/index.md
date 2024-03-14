@@ -5,13 +5,24 @@ hide:
 
 ## Welcome
 
-Go check out the rest of our website to see how you can get started with your favorite app. Most images come with docker cli or compose examples. If you've got any questions, feel free to join the [discord](https://hotio.dev/discord){: target=_blank rel="noopener" } server. Discord is our main channel to provide support, if you think to have found a bug in one of the images, feel free to create a new issue on GitHub.
+This is a fork of hotio's [official website](https://hotio.dev). It's main purpose is to show the few amounts of containers, that I forked myself off of hotio's deprecated projects. It's mainly for personal use, but I made the website available for documentation, for anyone who might stumble upon the forked containers.
 
-If you enjoy the images don't forget to go give us a star on [Docker Hub](https://hotio.dev/dockerhub){: target=_blank rel="noopener" } and [GitHub](https://hotio.dev/github){: target=_blank rel="noopener" }. It would mean a lot to us!
+Most images come with docker cli or compose examples. If you've got any questions, feel free to join the [discord](https://hotio.dev/discord){: target=_blank rel="noopener" } server. Discord is our main channel to provide support, if you think to have found a bug in one of the images, feel free to create a new issue on GitHub.
+
+If you enjoy the images don't forget to go give some stars:
+
+- Hotio's [Docker Hub](https://hotio.dev/dockerhub){: target=_blank rel="noopener" } 
+
+- Hotio's [GitHub](https://hotio.dev/github){: target=_blank rel="noopener" } 
+
+- Engels74's [Docker Hub](https://engels74.net/dockerhub){: target=_blank rel="noopener" } 
+
+- Engels74's [GitHub](https://engels74.net/github){: target=_blank rel="noopener" }
+
 
 ## Donations
 
-If you like what I do, you know the drill... :octicons-heart-fill-24:{: .heart }
+Show some (monetary) love for hotio - he definitely deserves it! :octicons-heart-fill-24:{: .heart }
 
 [:material-github: GitHub Sponsors](https://github.com/sponsors/mrhotio){: .md-button target=_blank rel="noopener" .donate-button }
 [:fontawesome-solid-money-bill-wave: Open Collective](https://opencollective.com/hotio_collective/donate?interval=month&amount=10){: .md-button target=_blank rel="noopener" .donate-button }

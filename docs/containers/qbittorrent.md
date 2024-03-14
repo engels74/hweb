@@ -20,7 +20,7 @@ hide:
         -e WEBUI_PORTS="8080/tcp,8080/udp" \
         -v /<host_folder_config>:/config \
         -v /<host_folder_data>:/data \
-        ghcr.io/hotio/qbittorrent
+        ghcr.io/engels74/qbittorrent
     ```
 
 === "compose"
@@ -29,7 +29,7 @@ hide:
     services:
       qbittorrent:
         container_name: qbittorrent
-        image: ghcr.io/hotio/qbittorrent
+        image: ghcr.io/engels74/qbittorrent
         ports:
           - "8080:8080"
         environment:
