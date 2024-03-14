@@ -3,11 +3,13 @@ hide:
   - toc
 ---
 
+<div class="image-logo"><img src="/img/image-logos/caddy.svg" alt="logo"></div>
+
 --8<-- "includes/header-links.md"
 
 !!! question "What is this?"
 
-    A docker image with [Caddy 2](https://caddyserver.com){: target=_blank rel="noopener" } (included modules: [caddy-dns/cloudflare](https://github.com/caddy-dns/cloudflare){: target=_blank rel="noopener" }, [mholt/caddy-ratelimit](https://github.com/mholt/caddy-ratelimit){: target=_blank rel="noopener" }). The default config only allows access from private ip ranges.
+    A docker image with [Caddy 2](https://caddyserver.com){: target=_blank rel="noopener" } (included modules: [caddy-dns/cloudflare](https://github.com/caddy-dns/cloudflare){: target=_blank rel="noopener" }, [caddy-dns/njalla](https://github.com/caddy-dns/njalla){: target=_blank rel="noopener" }, [mholt/caddy-ratelimit](https://github.com/mholt/caddy-ratelimit){: target=_blank rel="noopener" }. The default config only allows access from private ip ranges.
 
 ## Starting the container
 
@@ -24,7 +26,7 @@ hide:
         -e TZ="Etc/UTC" \
         -e CUSTOM_BUILD="" \
         -v /<host_folder_config>:/config \
-        ghcr.io/hotio/caddy
+        ghcr.io/engels74/caddy
     ```
 
 === "compose"
@@ -33,7 +35,7 @@ hide:
     services:
       caddy:
         container_name: caddy
-        image: ghcr.io/hotio/caddy
+        image: ghcr.io/engels74/caddy
         ports:
           - "80:8080"
           - "443:8443"

@@ -3,7 +3,13 @@ hide:
   - toc
 ---
 
+<div class="image-logo"><img src="/img/image-logos/qbittorrent.svg" alt="logo"></div>
+
 --8<-- "includes/header-links.md"
+
+!!! question "What is this?"
+
+    This is a fork of Hotio's [qBittorrent](https://hotio.dev/containers/qbittorrent) Docker image, that uses [libtorrent v2.x](https://github.com/userdocs/qbittorrent-nox-static/releases).
 
 ## Starting the container
 
@@ -20,7 +26,7 @@ hide:
         -e WEBUI_PORTS="8080/tcp,8080/udp" \
         -v /<host_folder_config>:/config \
         -v /<host_folder_data>:/data \
-        ghcr.io/hotio/qbittorrent
+        ghcr.io/engels74/qbittorrent
     ```
 
 === "compose"
@@ -29,7 +35,7 @@ hide:
     services:
       qbittorrent:
         container_name: qbittorrent
-        image: ghcr.io/hotio/qbittorrent
+        image: ghcr.io/engels74/qbittorrent
         ports:
           - "8080:8080"
         environment:

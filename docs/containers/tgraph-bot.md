@@ -3,7 +3,13 @@ hide:
   - toc
 ---
 
+<div class="image-logo"><img src="https://i.imgur.com/L5Tj3nW.png" alt="logo"></div>
+
 --8<-- "includes/header-links.md"
+
+!!! question "What is this?"
+
+    This is a Docker image for my [tgraph-bot](https://github.com/engels74/tgraph-bot-source). It posts Tautulli graphs to a Discord channel of your choice, with many more features.
 
 ## Starting the container
 
@@ -11,22 +17,22 @@ hide:
 
     ```shell linenums="1"
     docker run --rm \
-        --name base \
+        --name tgraph-bot \
         -e PUID=1000 \
         -e PGID=1000 \
         -e UMASK=002 \
         -e TZ="Etc/UTC" \
         -v /<host_folder_config>:/config \
-        ghcr.io/hotio/base:alpinevpn
+        ghcr.io/engels74/tgraph-bot
     ```
 
 === "compose"
 
     ```yaml linenums="1"
     services:
-      base:
-        container_name: base
-        image: ghcr.io/hotio/base:alpinevpn
+      tgraph-bot:
+        container_name: tgraph-bot
+        image: ghcr.io/engels74/tgraph-bot
         environment:
           - PUID=1000
           - PGID=1000
@@ -35,8 +41,6 @@ hide:
         volumes:
           - /<host_folder_config>:/config
     ```
-
-This image is the base image for all other application images, however it can be used as a standalone VPN image for other images to attach to.
 
 --8<-- "includes/tags.md"
 
