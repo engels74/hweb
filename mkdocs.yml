@@ -82,6 +82,7 @@ nav:
     - engels74/qbittorrent: containers/qbittorrent.md
     - engels74/qflood: containers/qflood.md
     - engels74/sabnzbd: containers/sabnzbd.md
+    - engels74/tgraph-bot: containers/tgraph-bot.md
 
 - Guides:
   - TorGuard: https://hotio.dev/guides/torguard

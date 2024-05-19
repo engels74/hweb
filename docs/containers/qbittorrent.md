@@ -3,7 +3,13 @@ hide:
   - toc
 ---
 
+<div class="image-logo"><img src="/img/image-logos/qbittorrent.svg" alt="logo"></div>
+
 --8<-- "includes/header-links.md"
+
+!!! question "What is this?"
+
+    This is a fork of Hotio's [qBittorrent](https://hotio.dev/containers/qbittorrent) Docker image, that includes ffprobe, at `/app/bin/ffprobe`. Useful for scripts.
 
 ## Starting the container
 

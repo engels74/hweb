@@ -11,7 +11,6 @@ hide:
 
     This is a fork of Hotio's [SABnzbd](https://hotio.dev/containers/sabnzbd) Docker image, that includes ffprobe, at `/app/bin/ffprobe`. Useful for scripts.
 
-
 ## Starting the container
 
 === "cli"
@@ -53,9 +52,5 @@ hide:
     ```
 
 --8<-- "includes/tags.md"
-
-## Scripts
-
-The script [nzb-notify](https://github.com/caronc/nzb-notify) is included in this image, you can find the script in the folder `/app-scripts`. First point your SABnzbd script folder setting to the previously mentioned location, next enable the script notification setting and pick `sabnzbd-notify.py`.
 
 --8<-- "includes/wireguard.md"
