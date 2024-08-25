@@ -79,6 +79,7 @@ nav:
 - Home: index.md
 - Containers:
   - Apps:
+    - engels74/caddy: containers/caddy.md
     - engels74/qbittorrent: containers/qbittorrent.md
     - engels74/qflood: containers/qflood.md
     - engels74/sabnzbd: containers/sabnzbd.md
