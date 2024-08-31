@@ -18,8 +18,8 @@ hide:
     ```shell linenums="1"
     docker run --rm \
         --name caddy \
-        -p 80:80 \
-        -p 443:443 \
+        -p 80:8080 \
+        -p 443:8443 \
         -e PUID=1000 \
         -e PGID=1000 \
         -e UMASK=002 \
@@ -37,8 +37,8 @@ hide:
         container_name: caddy
         image: ghcr.io/engels74/caddy
         ports:
-          - "80:80"
-          - "443:443"
+          - "80:8080"
+          - "443:8443"
         environment:
           - PUID=1000
           - PGID=1000
