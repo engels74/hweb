@@ -9,7 +9,7 @@ hide:
 
 !!! question "What is this?"
 
-    A docker image with [Caddy 2](https://caddyserver.com){: target=_blank rel="noopener" } (included modules: [caddy-dns/cloudflare](https://github.com/caddy-dns/cloudflare){: target=_blank rel="noopener" }, [caddy-dns/njalla](https://github.com/caddy-dns/njalla){: target=_blank rel="noopener" }, [mholt/caddy-ratelimit](https://github.com/mholt/caddy-ratelimit){: target=_blank rel="noopener" }, [greenpau/caddy-security](https://github.com/greenpau/caddy-security){: target=_blank rel="noopener" }). The default config only allows access from private ip ranges.
+    A docker image with [Caddy 2](https://caddyserver.com){: target=_blank rel="noopener" } (included modules: [caddy-dns/cloudflare](https://github.com/caddy-dns/cloudflare){: target=_blank rel="noopener" }, [caddy-dns/njalla](https://github.com/caddy-dns/njalla){: target=_blank rel="noopener" }, [mholt/caddy-ratelimit](https://github.com/mholt/caddy-ratelimit){: target=_blank rel="noopener" }. The default config only allows access from private ip ranges.
 
 ## Starting the container
 
