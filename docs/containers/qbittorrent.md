@@ -9,7 +9,7 @@ hide:
 
 !!! question "What is this?"
 
-    This is a fork of Hotio's [qBittorrent](https://hotio.dev/containers/qbittorrent) Docker image, that includes ffprobe, at `/app/bin/ffprobe`. Useful for scripts. The qBittorrent uses [libtorrent v2.x](https://github.com/userdocs/qbittorrent-nox-static/releases).
+    This is a fork of Hotio's [qBittorrent](https://hotio.dev/containers/qbittorrent) Docker image, that uses [libtorrent v2.x](https://github.com/userdocs/qbittorrent-nox-static/releases).
 
 ## Starting the container
 
