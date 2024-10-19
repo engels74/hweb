@@ -79,6 +79,7 @@ nav:
 - Home: index.md
 - Containers:
   - Apps:
+    - engels74/base-image: containers/base-image.md
     - engels74/caddy: containers/caddy.md
     - engels74/overseerr-anime: containers/overseerr-anime.md
     - engels74/qbittorrent: containers/qbittorrent.md
