@@ -9,7 +9,7 @@ hide:
 
 !!! question "What is this?"
 
-    A docker image with [Caddy 2](https://caddyserver.com){: target=_blank rel="noopener" } (included modules: [caddy-dns/cloudflare](https://github.com/caddy-dns/cloudflare){: target=_blank rel="noopener" }, [caddy-dns/njalla](https://github.com/caddy-dns/njalla){: target=_blank rel="noopener" }, [mholt/caddy-ratelimit](https://github.com/mholt/caddy-ratelimit){: target=_blank rel="noopener" }. The default config only allows access from private ip ranges.
+    A docker image with [Caddy 2](https://caddyserver.com){: target=_blank rel="noopener" } (included modules: [caddy-dns/cloudflare](https://github.com/caddy-dns/cloudflare){: target=_blank rel="noopener" }, [caddy-dns/njalla](https://github.com/caddy-dns/njalla){: target=_blank rel="noopener" }, [mholt/caddy-ratelimit](https://github.com/mholt/caddy-ratelimit){: target=_blank rel="noopener" }, [mholt/caddy-l4](https://github.com/mholt/caddy-l4){: target=_blank rel="noopener" }. The default config only allows access from private ip ranges.
 
 ## Starting the container
 
@@ -53,6 +53,6 @@ hide:
 
 ## Custom build
 
-If you set the environment variable `CUSTOM_BUILD` to a file location like for example `/config/caddy_linux_amd64_custom`, an attempt is made to start Caddy with that binary. The custom build can be obtained from the Caddy [download](https://caddyserver.com/download){: target=_blank rel="noopener" } page. This is particularly useful if you need extra modules.
+If you set the environment variable `CUSTOM_BUILD` to a file location like for example `/config/caddy_linux_amd64_custom`, an attempt is made to start Caddy with that binary. The custom build can be obtained from the Caddy [download](https://caddyserver.com/download){: target=\_blank rel="noopener" } page. This is particularly useful if you need extra modules.
 
 --8<-- "includes/wireguard.md"
