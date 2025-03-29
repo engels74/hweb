@@ -10,19 +10,19 @@ hide:
 !!! question "What is this?"
 
     This is a fork of Hotio's [overseerr](https://hotio.dev/containers/overseerr) Docker image, that includes the [Anime Instance PR (#3664)](https://github.com/sct/overseerr/pull/3664).
-    
-    It's built using [this fork of the PR](https://github.com/engels74/overseerr-anime-source). 
+
+    It's built using [this fork of the PR](https://github.com/engels74/overseerr-anime-source).
 
 !!! note "Branches and Tags"
 
     This project maintains two branches, each with its own Docker tag:
 
-    - **`:release` (or `:latest`)**:  
-      Based on the [`feature-default-anime-instance-checkbox-release`](https://github.com/engels74/overseerr-anime-source/tree/feature-default-anime-instance-checkbox-release) branch.  
-      This is the stable version, directly rebased from the PR author's repository.
+    - **`:release` (or `:latest`)**:
+      Based on the [`feature-default-anime-instance-checkbox-release`](https://github.com/engels74/overseerr-anime-source/tree/feature-default-anime-instance-checkbox-release) branch.
+      This is the stable version, rebased from the `sct/overseerr` repository's `master` branch (official releases) with the anime instance support changes applied.
 
-    - **`:nightly`**:  
-      Based on the [`feature-default-anime-instance-checkbox-nightly`](https://github.com/engels74/overseerr-anime-source/tree/feature-default-anime-instance-checkbox-nightly) branch.  
+    - **`:nightly`**:
+      Based on the [`feature-default-anime-instance-checkbox-nightly`](https://github.com/engels74/overseerr-anime-source/tree/feature-default-anime-instance-checkbox-nightly) branch.
       This version is rebased from the original `sct/overseerr` `develop` branch and includes the latest changes from the PR.
 
 ???+ info "Why is this needed?"
