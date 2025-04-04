@@ -1,20 +1,20 @@
 copyright: Copyright &copy; 2023 hotio<br>Logos based on work by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com">flaticon.com</a> and <a href="https://freeicons.io/profile/6200">Soni Sokell</a> on <a href="https://freeicons.io">freeicons.io</a>
-edit_uri: 'website/edit/master/docs'
+edit_uri: "website/edit/master/docs"
 
 extra:
   social:
-  - icon: fontawesome/solid/heart
-    link: 'https://hotio.dev/donate'
-    name: Donate
-  - icon: fontawesome/brands/discord
-    link: 'https://hotio.dev/discord'
-    name: Discord
-  - icon: fontawesome/brands/docker
-    link: 'https://engels74.net/dockerhub'
-    name: Docker
-  - icon: fontawesome/brands/github
-    link: 'https://engels74.net/github'
-    name: GitHub
+    - icon: fontawesome/solid/heart
+      link: "https://hotio.dev/donate"
+      name: Donate
+    - icon: fontawesome/brands/discord
+      link: "https://hotio.dev/discord"
+      name: Discord
+    - icon: fontawesome/brands/docker
+      link: "https://engels74.net/dockerhub"
+      name: Docker
+    - icon: fontawesome/brands/github
+      link: "https://engels74.net/github"
+      name: GitHub
 
 extra_css:
   - stylesheets/extra.css
@@ -23,15 +23,16 @@ plugins:
   - search
   - redirects:
       redirect_maps:
-        discord.md: 'https://discord.gg/FycMN9gTC3'
-        dockerhub.md: 'https://hub.docker.com/u/engels74'
-        github.md: 'https://github.com/engels74'
-        donate.md: 'https://hotio.dev/#donations'
-        faq.md: 'https://hotio.dev/faq'
+        discord.md: "https://discord.gg/FycMN9gTC3"
+        dockerhub.md: "https://hub.docker.com/u/engels74"
+        github.md: "https://github.com/engels74"
+        donate.md: "https://hotio.dev/#donations"
+        faq.md: "https://hotio.dev/faq"
         pia.md: https://www.privateinternetaccess.com/offer/hotio.dev_hsm018qg
-        proton.md: https://go.getproton.me/aff_c?offer_id=26&aff_id=7223
-        cyberghost.md: https://www.cyberghostvpn.com/offer/hatio.dev_2x3ni6r
-        torguard.md: https://torguard.net/aff.php?aff=7533
+        protonvpn.md: https://go.getproton.me/aff_c?offer_id=26&aff_id=7223
+        protondrive.md: https://go.getproton.me/aff_c?offer_id=43&aff_id=7223
+        protonmail.md: https://go.getproton.me/aff_c?offer_id=7&aff_id=7223
+        protonpass.md: https://go.getproton.me/aff_c?offer_id=42&aff_id=7223
 
 repo_name: engels74
 repo_url: https://github.com/engels74
@@ -76,21 +77,20 @@ markdown_extensions:
   - admonition
 
 nav:
-- Home: index.md
-- Containers:
-  - Apps:
-    - engels74/base-image: containers/base-image.md
-    - engels74/caddy: containers/caddy.md
-    - engels74/overseerr-anime: containers/overseerr-anime.md
-    - engels74/qbittorrent: containers/qbittorrent.md
-    - engels74/qflood: containers/qflood.md
-    - engels74/sabnzbd: containers/sabnzbd.md
-    - engels74/tgraph-bot: containers/tgraph-bot.md
-
-- Guides:
-  - TorGuard: https://hotio.dev/guides/torguard
-- Scripts:
-  - SysInfo: https://hotio.dev/scripts/sysinfo
-  - Pullio: https://hotio.dev/scripts/pullio
-  - Arr Discord Notifier: https://hotio.dev/scripts/arr-discord-notifier
-- FAQ: faq.md
+  - Home: index.md
+  - Containers:
+      - Apps:
+          - engels74/base-image: containers/base-image.md
+          - engels74/caddy: containers/caddy.md
+          - engels74/overseerr-anime: containers/overseerr-anime.md
+          - engels74/qbittorrent: containers/qbittorrent.md
+          - engels74/qflood: containers/qflood.md
+          - engels74/sabnzbd: containers/sabnzbd.md
+          - engels74/tgraph-bot: containers/tgraph-bot.md
+  - Guides:
+      - TorGuard: https://hotio.dev/guides/torguard
+  - Scripts:
+      - SysInfo: https://hotio.dev/scripts/sysinfo
+      - Pullio: https://hotio.dev/scripts/pullio
+      - Arr Discord Notifier: https://hotio.dev/scripts/arr-discord-notifier
+  - FAQ: faq.md

@@ -2,10 +2,10 @@
 
 !!! info
 
-    This image includes VPN support. The cli/compose examples below are environment variables and settings complementary to the app image examples, this means you'll have to add/merge the stuff below with the stuff above. In case you are still in need of a VPN, consider using my affiliate link for [Proton](https://hotio.dev/proton){: target=_blank rel="noopener" } or [Private Internet Access](https://hotio.dev/pia){: target=_blank rel="noopener" }.
+    This image includes VPN support. The cli/compose examples below are environment variables and settings complementary to the app image examples, this means you'll have to add/merge the stuff below with the stuff above. In case you are still in need of a VPN, consider using my affiliate links for [Proton VPN](https://hotio.dev/protonvpn){: target=_blank rel="noopener" }, [Proton Mail](https://hotio.dev/protonmail){: target=_blank rel="noopener" }, [Proton Drive](https://hotio.dev/protondrive){: target=_blank rel="noopener" }, [Proton Pass](https://hotio.dev/protonpass){: target=_blank rel="noopener" } or [Private Internet Access](https://hotio.dev/pia){: target=_blank rel="noopener" }.
 
 <img src="https://go.getproton.me/aff_i?offer_id=26&aff_id=7223" width="0" height="0" style="position:absolute;visibility:hidden;" border="0" />
-<a href="https://hotio.dev/proton" target="_blank" rel="noopener">
+<a href="https://hotio.dev/protonvpn" target="_blank" rel="noopener">
   <img id="vpnbanner" src="/img/protonvpn@2x.png" alt="ProtonVPN" width="320" height="50">
 </a>
 <a href="https://hotio.dev/pia" target="_blank" rel="noopener">
@@ -27,11 +27,10 @@
             -e VPN_EXPOSE_PORTS_ON_LAN="" \ #(2)
             -e VPN_AUTO_PORT_FORWARD="false" \ #(6)
             -e VPN_AUTO_PORT_FORWARD_TO_PORTS="" \ #(15)
-            -e VPN_KEEP_LOCAL_DNS="false" \ #(10)
             -e VPN_FIREWALL_TYPE="auto" \ #(17)
             -e VPN_HEALTHCHECK_ENABLED="false" \
             -e PRIVOXY_ENABLED="false" \
-            -e UNBOUND_ENABLED="false" \ #(16)
+            -e UNBOUND_ENABLED="false" \ # READ THIS(16)
             --cap-add=NET_ADMIN \
             --sysctl="net.ipv4.conf.all.src_valid_mark=1" \ #(12)
             --sysctl="net.ipv6.conf.all.disable_ipv6=1" \ #(3)
@@ -56,11 +55,10 @@
               - VPN_EXPOSE_PORTS_ON_LAN #(2)
               - VPN_AUTO_PORT_FORWARD=false #(6)
               - VPN_AUTO_PORT_FORWARD_TO_PORTS= #(15)
-              - VPN_KEEP_LOCAL_DNS=false #(10)
               - VPN_FIREWALL_TYPE=auto #(17)
               - VPN_HEALTHCHECK_ENABLED=false
               - PRIVOXY_ENABLED=false
-              - UNBOUND_ENABLED=false #(16)
+              - UNBOUND_ENABLED=false # READ THIS(16)
             cap_add:
               - NET_ADMIN
             sysctls:
@@ -88,11 +86,10 @@
             -e VPN_EXPOSE_PORTS_ON_LAN="" \ #(2)
             -e VPN_AUTO_PORT_FORWARD="true" \ #(6)
             -e VPN_AUTO_PORT_FORWARD_TO_PORTS="" \ #(15)
-            -e VPN_KEEP_LOCAL_DNS="false" \ #(10)
             -e VPN_FIREWALL_TYPE="auto" \ #(17)
             -e VPN_HEALTHCHECK_ENABLED="false" \
             -e PRIVOXY_ENABLED="false" \
-            -e UNBOUND_ENABLED="false" \ #(16)
+            -e UNBOUND_ENABLED="false" \ # READ THIS(16)
             --cap-add=NET_ADMIN \
             --sysctl="net.ipv4.conf.all.src_valid_mark=1" \ #(12)
             --sysctl="net.ipv6.conf.all.disable_ipv6=1" \ #(3)
@@ -117,11 +114,10 @@
               - VPN_EXPOSE_PORTS_ON_LAN #(2)
               - VPN_AUTO_PORT_FORWARD=true #(6)
               - VPN_AUTO_PORT_FORWARD_TO_PORTS= #(15)
-              - VPN_KEEP_LOCAL_DNS=false #(10)
               - VPN_FIREWALL_TYPE=auto #(17)
               - VPN_HEALTHCHECK_ENABLED=false
               - PRIVOXY_ENABLED=false
-              - UNBOUND_ENABLED=false #(16)
+              - UNBOUND_ENABLED=false # READ THIS(16)
             cap_add:
               - NET_ADMIN
             sysctls:
@@ -149,7 +145,6 @@
             -e VPN_EXPOSE_PORTS_ON_LAN="" \ #(2)
             -e VPN_AUTO_PORT_FORWARD="true" \ #(6)
             -e VPN_AUTO_PORT_FORWARD_TO_PORTS="" \ #(15)
-            -e VPN_KEEP_LOCAL_DNS="false" \ #(10)
             -e VPN_FIREWALL_TYPE="auto" \ #(17)
             -e VPN_HEALTHCHECK_ENABLED="false" \
             -e VPN_PIA_USER="" \ #(11)
@@ -158,7 +153,7 @@
             -e VPN_PIA_DIP_TOKEN="no" \ #(13)
             -e VPN_PIA_PORT_FORWARD_PERSIST="false" \ #(14)
             -e PRIVOXY_ENABLED="false" \
-            -e UNBOUND_ENABLED="false" \ #(16)
+            -e UNBOUND_ENABLED="false" \ # READ THIS(16)
             --cap-add=NET_ADMIN \
             --sysctl="net.ipv4.conf.all.src_valid_mark=1" \ #(12)
             --sysctl="net.ipv6.conf.all.disable_ipv6=1" \ #(3)
@@ -183,7 +178,6 @@
               - VPN_EXPOSE_PORTS_ON_LAN #(2)
               - VPN_AUTO_PORT_FORWARD=true #(6)
               - VPN_AUTO_PORT_FORWARD_TO_PORTS= #(15)
-              - VPN_KEEP_LOCAL_DNS=false #(10)
               - VPN_FIREWALL_TYPE=auto #(17)
               - VPN_HEALTHCHECK_ENABLED=false
               - VPN_PIA_USER #(11)
@@ -192,7 +186,7 @@
               - VPN_PIA_DIP_TOKEN=no #(13)
               - VPN_PIA_PORT_FORWARD_PERSIST=false #(14)
               - PRIVOXY_ENABLED=false
-              - UNBOUND_ENABLED=false #(16)
+              - UNBOUND_ENABLED=false # READ THIS(16)
             cap_add:
               - NET_ADMIN
             sysctls:
