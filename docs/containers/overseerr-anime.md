@@ -21,10 +21,6 @@ hide:
       Based on the [`feature-default-anime-instance-checkbox-release`](https://github.com/engels74/overseerr-anime-source/tree/feature-default-anime-instance-checkbox-release) branch.
       This is the stable version, rebased from the `sct/overseerr` repository's `master` branch (official releases) with the anime instance support changes applied.
 
-    - **`:nightly`**:
-      Based on the [`feature-default-anime-instance-checkbox-nightly`](https://github.com/engels74/overseerr-anime-source/tree/feature-default-anime-instance-checkbox-nightly) branch.
-      This version is rebased from the original `sct/overseerr` `develop` branch and includes the latest changes from the PR.
-
 ???+ info "Why is this needed?"
 
     This was made since Overseerr maintainers are [very busy](https://discord.com/channels/783137440809746482/785475251231784961/1262212831579996285), and it probably won't get merged in the near future.
