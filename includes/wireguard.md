@@ -20,21 +20,21 @@
         docker run --rm \
             --hostname container-name.internal \ #(18)
             -e VPN_ENABLED="true" \ #(5)
-            -e VPN_CONF="wg0" \ # READ THIS(8)
+            -e VPN_CONF="wg0" \ #(8)
             -e VPN_PROVIDER="generic" \ #(4)
             -e VPN_LAN_NETWORK="192.168.1.0/24" \ #(1)
-            -e VPN_LAN_LEAK_ENABLED="false" \
+            -e VPN_LAN_LEAK_ENABLED="false" \ #(10)
             -e VPN_EXPOSE_PORTS_ON_LAN="" \ #(2)
             -e VPN_AUTO_PORT_FORWARD="false" \ #(6)
             -e VPN_AUTO_PORT_FORWARD_TO_PORTS="" \ #(15)
             -e VPN_FIREWALL_TYPE="auto" \ #(17)
-            -e VPN_HEALTHCHECK_ENABLED="false" \
-            -e PRIVOXY_ENABLED="false" \
-            -e UNBOUND_ENABLED="false" \ # READ THIS(16)
+            -e VPN_HEALTHCHECK_ENABLED="false" \ #(20)
+            -e VPN_NAMESERVERS="" \ #(16)
+            -e PRIVOXY_ENABLED="false" \ #(19)
             --cap-add=NET_ADMIN \
             --sysctl="net.ipv4.conf.all.src_valid_mark=1" \ #(12)
             --sysctl="net.ipv6.conf.all.disable_ipv6=1" \ #(3)
-            --device /dev/net/tun:/dev/net/tun \ # OPTIONAL, READ THIS(9)
+            --device /dev/net/tun:/dev/net/tun \ # OPTIONAL(9)
             ...
         ```
 
@@ -48,24 +48,24 @@
             hostname: container-name.internal #(18)
             environment:
               - VPN_ENABLED=true #(5)
-              - VPN_CONF=wg0 # READ THIS(8)
+              - VPN_CONF=wg0 #(8)
               - VPN_PROVIDER=generic #(4)
               - VPN_LAN_NETWORK=192.168.1.0/24 #(1)
-              - VPN_LAN_LEAK_ENABLED=false
+              - VPN_LAN_LEAK_ENABLED=false #(10)
               - VPN_EXPOSE_PORTS_ON_LAN #(2)
               - VPN_AUTO_PORT_FORWARD=false #(6)
               - VPN_AUTO_PORT_FORWARD_TO_PORTS= #(15)
               - VPN_FIREWALL_TYPE=auto #(17)
-              - VPN_HEALTHCHECK_ENABLED=false
-              - PRIVOXY_ENABLED=false
-              - UNBOUND_ENABLED=false # READ THIS(16)
+              - VPN_HEALTHCHECK_ENABLED=false #(20)
+              - VPN_NAMESERVERS= #(16)
+              - PRIVOXY_ENABLED=false #(19)
             cap_add:
               - NET_ADMIN
             sysctls:
               - net.ipv4.conf.all.src_valid_mark=1 #(12)
               - net.ipv6.conf.all.disable_ipv6=1 #(3)
             devices:
-              - /dev/net/tun:/dev/net/tun # OPTIONAL, READ THIS(9)
+              - /dev/net/tun:/dev/net/tun # OPTIONAL(9)
             ...
         ```
 
@@ -79,21 +79,21 @@
         docker run --rm \
             --hostname container-name.internal \ #(18)
             -e VPN_ENABLED="true" \ #(5)
-            -e VPN_CONF="wg0" \ # READ THIS(8)
+            -e VPN_CONF="wg0" \ #(8)
             -e VPN_PROVIDER="proton" \ #(4)
             -e VPN_LAN_NETWORK="192.168.1.0/24" \ #(1)
-            -e VPN_LAN_LEAK_ENABLED="false" \
+            -e VPN_LAN_LEAK_ENABLED="false" \ #(10)
             -e VPN_EXPOSE_PORTS_ON_LAN="" \ #(2)
             -e VPN_AUTO_PORT_FORWARD="true" \ #(6)
             -e VPN_AUTO_PORT_FORWARD_TO_PORTS="" \ #(15)
             -e VPN_FIREWALL_TYPE="auto" \ #(17)
-            -e VPN_HEALTHCHECK_ENABLED="false" \
-            -e PRIVOXY_ENABLED="false" \
-            -e UNBOUND_ENABLED="false" \ # READ THIS(16)
+            -e VPN_HEALTHCHECK_ENABLED="false" \ #(20)
+            -e VPN_NAMESERVERS="" \ #(16)
+            -e PRIVOXY_ENABLED="false" \ #(19)
             --cap-add=NET_ADMIN \
             --sysctl="net.ipv4.conf.all.src_valid_mark=1" \ #(12)
             --sysctl="net.ipv6.conf.all.disable_ipv6=1" \ #(3)
-            --device /dev/net/tun:/dev/net/tun \ # OPTIONAL, READ THIS(9)
+            --device /dev/net/tun:/dev/net/tun \ # OPTIONAL(9)
             ...
         ```
 
@@ -107,24 +107,24 @@
             hostname: container-name.internal #(18)
             environment:
               - VPN_ENABLED=true #(5)
-              - VPN_CONF=wg0 # READ THIS(8)
+              - VPN_CONF=wg0 #(8)
               - VPN_PROVIDER=proton #(4)
               - VPN_LAN_NETWORK=192.168.1.0/24 #(1)
-              - VPN_LAN_LEAK_ENABLED=false
+              - VPN_LAN_LEAK_ENABLED=false #(10)
               - VPN_EXPOSE_PORTS_ON_LAN #(2)
               - VPN_AUTO_PORT_FORWARD=true #(6)
               - VPN_AUTO_PORT_FORWARD_TO_PORTS= #(15)
               - VPN_FIREWALL_TYPE=auto #(17)
-              - VPN_HEALTHCHECK_ENABLED=false
-              - PRIVOXY_ENABLED=false
-              - UNBOUND_ENABLED=false # READ THIS(16)
+              - VPN_HEALTHCHECK_ENABLED=false #(20)
+              - VPN_NAMESERVERS= #(16)
+              - PRIVOXY_ENABLED=false #(19)
             cap_add:
               - NET_ADMIN
             sysctls:
               - net.ipv4.conf.all.src_valid_mark=1 #(12)
               - net.ipv6.conf.all.disable_ipv6=1 #(3)
             devices:
-              - /dev/net/tun:/dev/net/tun # OPTIONAL, READ THIS(9)
+              - /dev/net/tun:/dev/net/tun # OPTIONAL(9)
             ...
         ```
 
@@ -138,26 +138,26 @@
         docker run --rm \
             --hostname container-name.internal \ #(18)
             -e VPN_ENABLED="true" \ #(5)
-            -e VPN_CONF="wg0" \ # READ THIS(8)
+            -e VPN_CONF="wg0" \ #(8)
             -e VPN_PROVIDER="pia" \ #(4)
             -e VPN_LAN_NETWORK="192.168.1.0/24" \ #(1)
-            -e VPN_LAN_LEAK_ENABLED="false" \
+            -e VPN_LAN_LEAK_ENABLED="false" \ #(10)
             -e VPN_EXPOSE_PORTS_ON_LAN="" \ #(2)
             -e VPN_AUTO_PORT_FORWARD="true" \ #(6)
             -e VPN_AUTO_PORT_FORWARD_TO_PORTS="" \ #(15)
             -e VPN_FIREWALL_TYPE="auto" \ #(17)
-            -e VPN_HEALTHCHECK_ENABLED="false" \
+            -e VPN_HEALTHCHECK_ENABLED="false" \ #(20)
+            -e VPN_NAMESERVERS="" \ #(16)
             -e VPN_PIA_USER="" \ #(11)
-            -e VPN_PIA_PASS="" \
+            -e VPN_PIA_PASS="" \ #(11)
             -e VPN_PIA_PREFERRED_REGION="" \ #(7)
             -e VPN_PIA_DIP_TOKEN="no" \ #(13)
             -e VPN_PIA_PORT_FORWARD_PERSIST="false" \ #(14)
-            -e PRIVOXY_ENABLED="false" \
-            -e UNBOUND_ENABLED="false" \ # READ THIS(16)
+            -e PRIVOXY_ENABLED="false" \ #(19)
             --cap-add=NET_ADMIN \
             --sysctl="net.ipv4.conf.all.src_valid_mark=1" \ #(12)
             --sysctl="net.ipv6.conf.all.disable_ipv6=1" \ #(3)
-            --device /dev/net/tun:/dev/net/tun \ # OPTIONAL, READ THIS(9)
+            --device /dev/net/tun:/dev/net/tun \ # OPTIONAL(9)
             ...
         ```
 
@@ -171,29 +171,29 @@
             hostname: container-name.internal #(18)
             environment:
               - VPN_ENABLED=true #(5)
-              - VPN_CONF=wg0 # READ THIS(8)
+              - VPN_CONF=wg0 #(8)
               - VPN_PROVIDER=pia #(4)
               - VPN_LAN_NETWORK=192.168.1.0/24 #(1)
-              - VPN_LAN_LEAK_ENABLED=false
+              - VPN_LAN_LEAK_ENABLED=false #(10)
               - VPN_EXPOSE_PORTS_ON_LAN #(2)
               - VPN_AUTO_PORT_FORWARD=true #(6)
               - VPN_AUTO_PORT_FORWARD_TO_PORTS= #(15)
               - VPN_FIREWALL_TYPE=auto #(17)
-              - VPN_HEALTHCHECK_ENABLED=false
+              - VPN_HEALTHCHECK_ENABLED=false #(20)
+              - VPN_NAMESERVERS= #(16)
               - VPN_PIA_USER #(11)
-              - VPN_PIA_PASS
+              - VPN_PIA_PASS #(11)
               - VPN_PIA_PREFERRED_REGION #(7)
               - VPN_PIA_DIP_TOKEN=no #(13)
               - VPN_PIA_PORT_FORWARD_PERSIST=false #(14)
-              - PRIVOXY_ENABLED=false
-              - UNBOUND_ENABLED=false # READ THIS(16)
+              - PRIVOXY_ENABLED=false #(19)
             cap_add:
               - NET_ADMIN
             sysctls:
               - net.ipv4.conf.all.src_valid_mark=1 #(12)
               - net.ipv6.conf.all.disable_ipv6=1 #(3)
             devices:
-              - /dev/net/tun:/dev/net/tun # OPTIONAL, READ THIS(9)
+              - /dev/net/tun:/dev/net/tun # OPTIONAL(9)
             ...
         ```
 
