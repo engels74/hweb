@@ -7,7 +7,7 @@ hide:
 
 This is a fork of hotio's [official website](https://hotio.dev). It's main purpose is to show the few amounts of containers, that I forked myself off of hotio's deprecated projects. It's mainly for personal use, but I made the website available for documentation, for anyone who might stumble upon the forked containers.
 
-Most images come with docker cli or compose examples. If you've got any questions, feel free to join the [discord](https://hotio.dev/discord){: target=_blank rel="noopener" } server. Discord is our main channel to provide support, if you think to have found a bug in one of the images, feel free to create a new issue on GitHub.
+Most images come with docker cli or compose examples. If you've got any questions or think you've found a bug in one of the images, please create a new issue on the GitHub repository for that specific container.
 
 If you enjoy the images don't forget to go give some stars:
 
@@ -33,8 +33,4 @@ Show some (monetary) love for hotio - he definitely deserves it! :octicons-heart
 
 ## Support
 
-Join us on Discord!
-
-<a href="https://hotio.dev/discord" target="_blank" rel="noopener">
-  <img src="img/discord.svg" alt="discord" width="300" height="82">
-</a>
+For support, please create an issue on the GitHub repository for the specific container you need help with.
