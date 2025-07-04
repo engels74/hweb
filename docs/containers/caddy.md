@@ -9,9 +9,9 @@ hide:
 
 !!! question "What is this?"
 
-    A docker image with [Caddy 2](https://caddyserver.com){: target=_blank rel="noopener" } (included modules: [caddy-dns/cloudflare](https://github.com/caddy-dns/cloudflare){: target=_blank rel="noopener" }, [caddy-dns/njalla](https://github.com/caddy-dns/njalla){: target=_blank rel="noopener" }, [mholt/caddy-ratelimit](https://github.com/mholt/caddy-ratelimit)){: target=_blank rel="noopener" }. The default config only allows access from private ip ranges.
+    A Docker image with [Caddy 2](https://caddyserver.com){: target=_blank rel="noopener" } including DNS modules for [Cloudflare](https://github.com/caddy-dns/cloudflare){: target=_blank rel="noopener" }, [Njalla](https://github.com/caddy-dns/njalla){: target=_blank rel="noopener" }, and [rate limiting](https://github.com/mholt/caddy-ratelimit){: target=_blank rel="noopener" }. The default configuration restricts access to private IP ranges only.
 
-    As we are currently waiting on [this PR](https://github.com/libdns/njalla/pull/2) to get merged, we're using the [about-to-be-merged](https://github.com/engels74/libdns-njalla) version of "libdns/njalla". 
+    **Note:** The Njalla DNS module uses a [custom build](https://github.com/engels74/libdns-njalla) pending the merge of [this upstream PR](https://github.com/libdns/njalla/pull/2). 
 
 ## Starting the container
 
