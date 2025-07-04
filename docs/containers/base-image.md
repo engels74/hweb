@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-<div class="image-logo"><img src="/img/image-logos/base.png" alt="logo"></div>
+<div class="image-logo"><img src="/img/image-logos/base-image.svg" alt="logo"></div>
 
 --8<-- "includes/header-links.md"
 
