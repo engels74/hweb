@@ -28,6 +28,7 @@ hide:
         -e PGID=1000 \
         -e UMASK=002 \
         -e TZ="Etc/UTC" \
+        -e LIBTORRENT="v2" \
         -e FLOOD_AUTH="true" \
         -e ARGS="" \
         -e FLOOD_ARGS="" \
@@ -51,6 +52,7 @@ hide:
           - PGID=1000
           - UMASK=002
           - TZ=Etc/UTC
+          - LIBTORRENT=v2
           - FLOOD_AUTH=true
           - ARGS
           - FLOOD_ARGS
