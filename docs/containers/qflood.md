@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-<div class="image-logo"><img src="https://i.imgur.com/3f14EAL.png" alt="logo"></div>
+<div class="image-logo"><img src="/img/image-logos/qflood.svg" alt="logo"></div>
 
 --8<-- "includes/header-links.md"
 
