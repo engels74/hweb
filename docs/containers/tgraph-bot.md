@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-<div class="image-logo"><img src="https://i.imgur.com/L5Tj3nW.png" alt="logo"></div>
+<div class="image-logo"><img src="/img/image-logos/tgraph-bot.svg" alt="logo"></div>
 
 --8<-- "includes/header-links.md"
 
