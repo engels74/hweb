@@ -11,11 +11,7 @@ Most images come with docker cli or compose examples. If you've got any question
 
 If you enjoy the images don't forget to go give some stars:
 
-- Hotio's [Docker Hub](https://hotio.dev/dockerhub){: target=_blank rel="noopener" } 
-
 - Hotio's [GitHub](https://hotio.dev/github){: target=_blank rel="noopener" } 
-
-- Engels74's [Docker Hub](https://engels74.net/dockerhub){: target=_blank rel="noopener" } 
 
 - Engels74's [GitHub](https://engels74.net/github){: target=_blank rel="noopener" }
 
