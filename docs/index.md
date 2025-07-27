@@ -9,6 +9,8 @@ This is a fork of hotio's [official website](https://hotio.dev). It's main purpo
 
 Most images come with docker cli or compose examples. If you've got any questions or think you've found a bug in one of the images, please create a new issue on the GitHub repository for that specific container.
 
+All donation links and affiliate links still point to hotio's original website, as he's the original author of the containers and deserves all the credit.
+
 If you enjoy the images don't forget to go give some stars:
 
 - Hotio's [GitHub](https://hotio.dev/github){: target=_blank rel="noopener" } 

@@ -70,16 +70,17 @@ markdown_extensions:
   - admonition
 
 nav:
-  - Home: index.md
-  - Containers:
-      - Apps:
-          - engels74/base-image: containers/base-image.md
-          - engels74/caddy: containers/caddy.md
-          - engels74/overseerr-anime: containers/overseerr-anime.md
-          - engels74/qbittorrent: containers/qbittorrent.md
-          - engels74/qflood: containers/qflood.md
-          - engels74/sabnzbd: containers/sabnzbd.md
-          - engels74/tgraph-bot: containers/tgraph-bot.md
+- Home: index.md
+- Containers:
+  - Base Images:
+    - engels74/base-image: containers/base-image.md
+  - Apps:
+    - engels74/caddy: containers/caddy.md
+    - engels74/overseerr-anime: containers/overseerr-anime.md
+    - engels74/qbittorrent: containers/qbittorrent.md
+    - engels74/qflood: containers/qflood.md
+    - engels74/sabnzbd: containers/sabnzbd.md
+    - engels74/tgraph-bot: containers/tgraph-bot.md
   - Guides:
       - TorGuard: https://hotio.dev/guides/torguard
   - Scripts:
