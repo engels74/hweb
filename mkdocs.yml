@@ -17,15 +17,12 @@ plugins:
   - search
   - redirects:
       redirect_maps:
-        discord.md: "https://discord.gg/FycMN9gTC3"
         github.md: "https://github.com/engels74"
         donate.md: "https://hotio.dev/#donations"
         faq.md: "https://hotio.dev/faq"
         pia.md: https://www.privateinternetaccess.com/offer/hotio.dev_hsm018qg
         protonvpn.md: https://go.getproton.me/aff_c?offer_id=26&aff_id=7223
-        protondrive.md: https://go.getproton.me/aff_c?offer_id=43&aff_id=7223
-        protonmail.md: https://go.getproton.me/aff_c?offer_id=7&aff_id=7223
-        protonpass.md: https://go.getproton.me/aff_c?offer_id=42&aff_id=7223
+        protonunlimited.md: https://go.getproton.me/aff_c?offer_id=42&aff_id=7223&url_id=1194
 
 repo_name: engels74
 repo_url: https://github.com/engels74
@@ -48,7 +45,7 @@ theme:
     - content.code.copy
     - content.code.annotate
   language: en
-  logo: img/engels74.svg
+  logo: img/hotio.svg
   name: material
   palette:
     scheme: hotio
