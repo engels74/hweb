@@ -3,11 +3,17 @@ hide:
   - toc
 ---
 
+<div class="image-logo"><img src="/img/image-logos/qbittorrent.svg" alt="logo"></div>
+
 --8<-- "includes/header-links.md"
 
-!!! warning "Don't be stupid!"
+!!! question "What is this?"
 
-    Don't be stupid like this guy from [apogliaghi.com](https://apogliaghi.com/2025/09/crypto-miner-in-hotio/qbittorrent)! I'm not bundling a cryptominer. If you want to play sysadmin, know what you are doing! It's fairly well known that if you expose qBittorrent (or other software) to the world, that there's a chance you're gonna get pwned. Certainly if you keep running old versions (I'm not gonna bother checking how old his digest sha actually is, EDIT: sha is recent, but in his article no mention about how long or what version he had running in the past). All sourcecode is visible on GitHub and verifiable by anyone. The screenshotted oneliner from discord without any context can also be searched for in my discord server if you wanna read the context. The sad part here is that the incompetent person throwing false accusations around is probably seen by his family as the smart nephew that knows everything about computers. RIP The Family! See this article on [torrentfreak.com](https://torrentfreak.com/qbittorrent-web-ui-exploited-to-mine-cryptocurrency-heres-how-to-fix-230902/) for more info on how you could get pwned. He's not the first one and sadly he's not going to be the last victim, but atleast man up and own your mistake!
+    This is a fork of Hotio's [qBittorrent](https://hotio.dev/containers/qbittorrent) Docker image, that uses [libtorrent v2.x](https://github.com/userdocs/qbittorrent-nox-static/releases) by default.
+    
+    Hotio [recently](https://github.com/hotio/qbittorrent/commit/e8dada05befebf51d73669a05b09ef046c6f69e6) added the option to define by ENV if you want to use libtorrent v1 or v2. This one uses `v2` by default.
+    
+    This also still includes VueTorrent in the image, as hotio also removed support for themes.
 
 ## Starting the container
 
@@ -21,11 +27,11 @@ hide:
         -e PGID=1000 \
         -e UMASK=002 \
         -e TZ="Etc/UTC" \
-        -e WEBUI_PORTS="8080/tcp" \
-        -e LIBTORRENT="v1" \
+        -e WEBUI_PORTS="8080/tcp,8080/udp" \
+        -e LIBTORRENT="v2" \
         -v /<host_folder_config>:/config \
         -v /<host_folder_data>:/data \
-        ghcr.io/hotio/qbittorrent
+        ghcr.io/engels74/qbittorrent
     ```
 
 === "compose"
@@ -34,7 +40,7 @@ hide:
     services:
       qbittorrent:
         container_name: qbittorrent
-        image: ghcr.io/hotio/qbittorrent
+        image: ghcr.io/engels74/qbittorrent
         ports:
           - "8080:8080"
         environment:
@@ -42,13 +48,17 @@ hide:
           - PGID=1000
           - UMASK=002
           - TZ=Etc/UTC
-          - WEBUI_PORTS=8080/tcp
-          - LIBTORRENT=v1
+          - WEBUI_PORTS=8080/tcp,8080/udp
+          - LIBTORRENT=v2
         volumes:
           - /<host_folder_config>:/config
           - /<host_folder_data>:/data
     ```
 
 --8<-- "includes/tags.md"
+
+## Alternative Web UI
+
+This image comes bundled with the alternative Web UI [VueTorrent](https://github.com/VueTorrent/VueTorrent) (`/app/vuetorrent`). Nightwalker is removed, as it is no longer maintained.
 
 --8<-- "includes/wireguard.md"

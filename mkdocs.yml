@@ -1,43 +1,36 @@
-copyright: Copyright &copy; 2023 hotio<br>Logos based on work by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com">flaticon.com</a> and <a href="https://freeicons.io/profile/6200">Soni Sokell</a> on <a href="https://freeicons.io">freeicons.io</a>
-edit_uri: 'website/edit/master/docs'
+copyright: Copyright &copy; 2023-2024 engels74<br>Based on <a href="https://hotio.dev">hotio.dev</a>. Logos based on work by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com">flaticon.com</a> and <a href="https://freeicons.io/profile/6200">Soni Sokell</a> on <a href="https://freeicons.io">freeicons.io</a>
+edit_uri: 'hweb/edit/master/docs'
 
 extra:
   social:
   - icon: fontawesome/solid/heart
-    link: 'https://hotio.dev/donate'
-    name: Donate
-  - icon: fontawesome/brands/discord
-    link: 'https://hotio.dev/discord'
-    name: Discord
+    link: 'https://github.com/sponsors/mrhotio'
+    name: Donate to Hotio
   - icon: fontawesome/brands/github
-    link: 'https://hotio.dev/github'
+    link: 'https://github.com/engels74'
     name: GitHub
 
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+  - javascripts/loadJSON.js
+
 plugins:
   - search
-  - redirects:
-      redirect_maps:
-        discord.md: 'https://discord.gg/FycMN9gTC3'
-        github.md: 'https://github.com/hotio'
-        donate.md: 'https://hotio.dev/#donations'
-        pia.md: https://www.privateinternetaccess.com/offer/hotio.dev_hsm018qg
-        protonvpn.md: https://go.getproton.me/aff_c?offer_id=26&aff_id=7223
-        protonunlimited.md: https://go.getproton.me/aff_c?offer_id=42&aff_id=7223&url_id=1194
 
-repo_name: hotio
-repo_url: https://github.com/hotio
-site_author: hotio
-site_description: Documentation for all Docker images maintained by hotio.
-site_name: hotio.dev
-site_url: https://hotio.dev
+repo_name: engels74
+repo_url: https://github.com/engels74
+site_author: engels74
+site_description: Documentation for Docker images maintained by engels74.
+site_name: engels74.net
+site_url: https://engels74.net
 
 theme:
   icon:
     repo: fontawesome/brands/github
-  favicon: img/favicon.ico
+  favicon: img/engels74.svg
   features:
     - navigation.instant
     - navigation.tabs
@@ -48,7 +41,7 @@ theme:
     - content.code.copy
     - content.code.annotate
   language: en
-  logo: img/hotio.svg
+  logo: img/engels74.svg
   name: material
   palette:
     scheme: hotio
@@ -73,37 +66,14 @@ nav:
 - Home: index.md
 - Containers:
   - Base Images:
-    - hotio/base: containers/base.md
+    - engels74/base-image: containers/base-image.md
   - Apps:
-    - hotio/autoscan: containers/autoscan.md
-    - hotio/bazarr: containers/bazarr.md
-    - hotio/caddy: containers/caddy.md
-    - hotio/cloudflareddns: containers/cloudflareddns.md
-    - hotio/doplarr: containers/doplarr.md
-    - hotio/duplicacy: containers/duplicacy.md
-    - hotio/jackett: containers/jackett.md
-    - hotio/jellyfin: containers/jellyfin.md
-    - hotio/lidarr: containers/lidarr.md
-    - hotio/mergerfs: containers/mergerfs.md
-    - hotio/nzbget: containers/nzbget.md
-    - hotio/nzbhydra2: containers/nzbhydra2.md
-    - hotio/plex: containers/plex.md
-    - hotio/prowlarr: containers/prowlarr.md
-    - hotio/qbitmanage: containers/qbitmanage.md
-    - hotio/qbittorrent: containers/qbittorrent.md
-    - hotio/qui: containers/qui.md
-    - hotio/radarr: containers/radarr.md
-    - hotio/requestrr: containers/requestrr.md
-    - hotio/rflood: containers/rflood.md
-    - hotio/sabnzbd: containers/sabnzbd.md
-    - hotio/seerr: containers/seerr.md
-    - hotio/sonarr: containers/sonarr.md
-    - hotio/stash: containers/stash.md
-    - hotio/tautulli: containers/tautulli.md
-    - hotio/unpackerr: containers/unpackerr.md
-    - hotio/whisparr: containers/whisparr.md
-- Scripts:
-  - SysInfo: scripts/sysinfo.md
-  - Pullio: scripts/pullio.md
-  - Arr Discord Notifier: scripts/arr-discord-notifier.md
+    - engels74/caddy: containers/caddy.md
+    - engels74/overseerr-anime: containers/overseerr-anime.md
+    - engels74/qbittorrent: containers/qbittorrent.md
+    - engels74/qflood: containers/qflood.md
+    - engels74/sabnzbd: containers/sabnzbd.md
+  - engels74:
+    - engels74/obzorarr: containers/obzorarr.md
+    - engels74/tgraph-bot: containers/tgraph-bot.md
 - FAQ: faq.md

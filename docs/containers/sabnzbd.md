@@ -3,7 +3,13 @@ hide:
   - toc
 ---
 
+<div class="image-logo"><img src="/img/image-logos/sabnzbd.svg" alt="logo"></div>
+
 --8<-- "includes/header-links.md"
+
+!!! question "What is this?"
+
+    This is a fork of Hotio's [SABnzbd](https://hotio.dev/containers/sabnzbd) Docker image, that includes ffprobe, at `/app/bin/ffprobe`. Useful for scripts.
 
 ## Starting the container
 
@@ -16,12 +22,12 @@ hide:
         -e PUID=1000 \
         -e PGID=1000 \
         -e UMASK=002 \
-        -e WEBUI_PORTS="8080/tcp" \
+        -e WEBUI_PORTS="8080/tcp,8080/udp" \
         -e ARGS="" \
         -e TZ="Etc/UTC" \
         -v /<host_folder_config>:/config \
         -v /<host_folder_data>:/data \
-        ghcr.io/hotio/sabnzbd
+        ghcr.io/engels74/sabnzbd
     ```
 
 === "compose"
@@ -30,7 +36,7 @@ hide:
     services:
       sabnzbd:
         container_name: sabnzbd
-        image: ghcr.io/hotio/sabnzbd
+        image: ghcr.io/engels74/sabnzbd
         ports:
           - "8080:8080"
         environment:
@@ -38,7 +44,7 @@ hide:
           - PGID=1000
           - UMASK=002
           - TZ=Etc/UTC
-          - WEBUI_PORTS=8080/tcp
+          - WEBUI_PORTS=8080/tcp,8080/udp
           - ARGS
         volumes:
           - /<host_folder_config>:/config
