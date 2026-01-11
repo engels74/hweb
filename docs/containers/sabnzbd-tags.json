@@ -34,17 +34,17 @@
     ]
   },
   "testing": {
-    "commit_message": "Upstream update: alpinevpn-5251e5c => alpinevpn-337a82e",
-    "commit_sha": "e1609e219c5cad356876027595d1ad686d1441c2",
+    "commit_message": "Upstream update: alpinevpn-337a82e => alpinevpn-4dcfd96",
+    "commit_sha": "70bc6beff3c698af968ab0cdbf4b85d0abb43dca",
     "description": "Pre-releases",
     "hide": false,
-    "last_updated": "2026-01-09T16:12:38.000Z",
-    "last_updated_url": "https://github.com/engels74/sabnzbd/actions/runs/20858010922",
+    "last_updated": "2026-01-11T11:12:11.000Z",
+    "last_updated_url": "https://github.com/engels74/sabnzbd/actions/runs/20894187511",
     "latest": false,
     "tags": [
       "testing",
       "testing-4.6.0Beta2",
-      "testing-e1609e2",
+      "testing-70bc6be",
       "",
       "",
       ""
