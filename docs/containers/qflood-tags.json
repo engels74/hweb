@@ -1,16 +1,16 @@
 {
   "nightly": {
-    "commit_message": "Upstream update: alpinevpn-5251e5c => alpinevpn-337a82e",
-    "commit_sha": "8d0a5e1c9180df20fb430cbfca0a14e4d0a7be2d",
+    "commit_message": "Upstream update: alpinevpn-337a82e => alpinevpn-4dcfd96",
+    "commit_sha": "95b5f63f40f8b7ae745a5e092691da05ee86496d",
     "description": "nightly",
     "hide": false,
-    "last_updated": "2026-01-09T16:12:32.000Z",
-    "last_updated_url": "https://github.com/engels74/qflood/actions/runs/20858008165",
+    "last_updated": "2026-01-11T11:12:07.000Z",
+    "last_updated_url": "https://github.com/engels74/qflood/actions/runs/20894186944",
     "latest": false,
     "tags": [
       "nightly",
       "nightly-5.1.4--20486217775",
-      "nightly-8d0a5e1",
+      "nightly-95b5f63",
       "nightly-v5",
       "nightly-v5.1",
       "nightly-v5.1.4"
