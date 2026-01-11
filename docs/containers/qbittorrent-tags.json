@@ -1,16 +1,16 @@
 {
   "legacy": {
-    "commit_message": "Upstream update: alpinevpn-5251e5c => alpinevpn-337a82e",
-    "commit_sha": "2df3c58e63f6fde8f03f056ad42ac0b2c02d6b48",
+    "commit_message": "Upstream update: alpinevpn-337a82e => alpinevpn-4dcfd96",
+    "commit_sha": "50678ba848ff86d43538fc9e76d322f78f924d2d",
     "description": "Fixed to v4.3.9",
     "hide": false,
-    "last_updated": "2026-01-09T16:12:30.000Z",
-    "last_updated_url": "https://github.com/engels74/qbittorrent/actions/runs/20858007058",
+    "last_updated": "2026-01-11T11:12:05.000Z",
+    "last_updated_url": "https://github.com/engels74/qbittorrent/actions/runs/20894186502",
     "latest": false,
     "tags": [
       "legacy",
       "legacy-4.3.9",
-      "legacy-2df3c58",
+      "legacy-50678ba",
       "legacy-v4",
       "legacy-v4.3",
       "legacy-v4.3.9"
