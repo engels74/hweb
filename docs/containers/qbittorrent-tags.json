@@ -17,17 +17,17 @@
     ]
   },
   "release": {
-    "commit_message": "Upstream update: alpinevpn-5251e5c => alpinevpn-337a82e",
-    "commit_sha": "31a5433524c49da2fb85c3cb7517bdf682378f19",
+    "commit_message": "Upstream update: alpinevpn-337a82e => alpinevpn-4dcfd96",
+    "commit_sha": "dac921cfac528ea1aba31093a4a6d29848c737c4",
     "description": "Releases",
     "hide": false,
-    "last_updated": "2026-01-09T16:12:31.000Z",
-    "last_updated_url": "https://github.com/engels74/qbittorrent/actions/runs/20858007555",
+    "last_updated": "2026-01-11T11:12:06.000Z",
+    "last_updated_url": "https://github.com/engels74/qbittorrent/actions/runs/20894186752",
     "latest": true,
     "tags": [
       "release",
       "release-5.1.4",
-      "release-31a5433",
+      "release-dac921c",
       "release-v5",
       "release-v5.1",
       "release-v5.1.4"
