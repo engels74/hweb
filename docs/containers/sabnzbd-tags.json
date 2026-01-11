@@ -1,50 +1,50 @@
 {
   "nightly": {
-    "commit_message": "Upstream update: alpinevpn-0904450 => alpinevpn-5b650ae",
-    "commit_sha": "d60fbce0bb462243fdc1d08e2b400bd1f8e8609d",
+    "commit_message": "Upstream update: alpinevpn-5251e5c => alpinevpn-337a82e",
+    "commit_sha": "f3a8e88ee3e3e9a1eed915d50b9a60c584bb2d41",
     "description": "Every commit to develop",
     "hide": false,
-    "last_updated": "2026-01-11T08:19:57.000Z",
-    "last_updated_url": "https://github.com/hotio/sabnzbd/actions/runs/20892089744",
+    "last_updated": "2026-01-09T16:12:35.000Z",
+    "last_updated_url": "https://github.com/engels74/sabnzbd/actions/runs/20858010138",
     "latest": false,
     "tags": [
       "nightly",
       "nightly-df1c0915d07982546e282b2b52354a49cde993ba",
-      "nightly-d60fbce",
+      "nightly-f3a8e88",
       "",
       "",
       ""
     ]
   },
   "release": {
-    "commit_message": "Upstream update: alpinevpn-0904450 => alpinevpn-5b650ae",
-    "commit_sha": "5fe13727e80942d58ff78783a93e465eea2eb5ef",
+    "commit_message": "Upstream update: alpinevpn-5251e5c => alpinevpn-337a82e",
+    "commit_sha": "b01c1518a6f19b2601bd544dd6c4fdcc6b90f3b2",
     "description": "Releases",
     "hide": false,
-    "last_updated": "2026-01-11T08:19:58.000Z",
-    "last_updated_url": "https://github.com/hotio/sabnzbd/actions/runs/20892089819",
+    "last_updated": "2026-01-09T16:12:37.000Z",
+    "last_updated_url": "https://github.com/engels74/sabnzbd/actions/runs/20858010334",
     "latest": true,
     "tags": [
       "release",
       "release-4.5.5",
-      "release-5fe1372",
+      "release-b01c151",
       "release-v4",
       "release-v4.5",
       "release-v4.5.5"
     ]
   },
   "testing": {
-    "commit_message": "Upstream update: alpinevpn-0904450 => alpinevpn-5b650ae",
-    "commit_sha": "68aaa3d5e811d97774932733dca433c6e5d0015c",
+    "commit_message": "Upstream update: alpinevpn-5251e5c => alpinevpn-337a82e",
+    "commit_sha": "e1609e219c5cad356876027595d1ad686d1441c2",
     "description": "Pre-releases",
     "hide": false,
-    "last_updated": "2026-01-11T08:19:59.000Z",
-    "last_updated_url": "https://github.com/hotio/sabnzbd/actions/runs/20892090106",
+    "last_updated": "2026-01-09T16:12:38.000Z",
+    "last_updated_url": "https://github.com/engels74/sabnzbd/actions/runs/20858010922",
     "latest": false,
     "tags": [
       "testing",
       "testing-4.6.0Beta2",
-      "testing-68aaa3d",
+      "testing-e1609e2",
       "",
       "",
       ""

@@ -1,13 +1,19 @@
 ---
 hide:
   - toc
-title: hotio/caddy
+title: engels74/caddy
 ---
 
-[:octicons-mark-github-16: GitHub](https://github.com/hotio/caddy){ class="header-links" target="_blank" rel="noopener" }  
-[:octicons-container-16: ghcr.io](https://github.com/orgs/hotio/packages/container/package/caddy){ class="header-links" target="_blank" rel="noopener" }  
+[:octicons-mark-github-16: GitHub](https://github.com/engels74/caddy){ class="header-links" target="_blank" rel="noopener" }
+[:octicons-container-16: ghcr.io](https://github.com/orgs/engels74/packages/container/package/caddy){ class="header-links" target="_blank" rel="noopener" }
 
-[:octicons-link-16: Upstream Project](https://caddyserver.com){ class="header-links" target="_blank" rel="noopener" }  
+[:octicons-link-16: Upstream Project](https://caddyserver.com){ class="header-links" target="_blank" rel="noopener" }
+
+<div class="image-logo"><img src="/img/image-logos/caddy.svg" alt="logo"></div>
+
+!!! question "What is this?"
+
+    A Docker image with [Caddy 2](https://caddyserver.com){: target=_blank rel="noopener" } including DNS modules for [Cloudflare](https://github.com/caddy-dns/cloudflare){: target=_blank rel="noopener" }, [Njalla](https://github.com/caddy-dns/njalla){: target=_blank rel="noopener" }, and [rate limiting](https://github.com/mholt/caddy-ratelimit){: target=_blank rel="noopener" }. The default configuration restricts access to private IP ranges only.
 
 <div id="tags-table">
   <table>
@@ -20,8 +26,8 @@ title: hotio/caddy
       </tr>
     </thead>
     <tbody id="tags-table-body">
-<tr><td><div class="tag-decoration-latest">latest</div><div id="tag26959" onclick="CopyToClipboard('tag26959');return false;" class="tag-decoration">release</div><div id="tag5630" onclick="CopyToClipboard('tag5630');return false;" class="tag-decoration">release-2.10.2</div><div id="tag2145" onclick="CopyToClipboard('tag2145');return false;" class="tag-decoration">release-08b4b0c</div><div id="tag27598" onclick="CopyToClipboard('tag27598');return false;" class="tag-decoration">release-v2</div><div id="tag29720" onclick="CopyToClipboard('tag29720');return false;" class="tag-decoration">release-v2.10</div><div id="tag30934" onclick="CopyToClipboard('tag30934');return false;" class="tag-decoration">release-v2.10.2</div></td><td>Releases</td><td><a href="https://github.com/hotio/caddy/commit/08b4b0ce1dff4ff505575de242c9f6d93ea87184" target="_blank">Upstream update: alpinevpn-0904450 => alpinevpn-5b650ae</a></td><td><a href="https://github.com/hotio/caddy/actions/runs/20892083889" target="_blank">2026-01-11 08:19:20</a></td></tr>
-</tbody>
+<tr><td><div class="tag-decoration-latest">latest</div><div id="tag2001" onclick="CopyToClipboard('tag2001');return false;" class="tag-decoration">release</div></td><td>Releases</td><td><a href="https://github.com/engels74/caddy/commits/release" target="_blank">View commits</a></td><td><a href="https://github.com/engels74/caddy/actions" target="_blank">View builds</a></td></tr>
+    </tbody>
   </table>
 </div>
 
@@ -31,7 +37,7 @@ title: hotio/caddy
 
     ```shell linenums="1"
     docker run --rm \
-        --name="caddy" \
+        --name caddy \
         -p 80:8080 \
         -p 443:8443 \
         -e PUID=1000 \
@@ -40,7 +46,7 @@ title: hotio/caddy
         -e TZ="Etc/UTC" \
         -e CUSTOM_BUILD="" \
         -v /<host_folder_config>:/config \
-        ghcr.io/hotio/caddy
+        ghcr.io/engels74/caddy
     ```
 
 === "compose"
@@ -49,7 +55,7 @@ title: hotio/caddy
     services:
       caddy:
         container_name: caddy
-        image: ghcr.io/hotio/caddy
+        image: ghcr.io/engels74/caddy
         ports:
           - "80:8080"
           - "443:8443"
@@ -63,12 +69,8 @@ title: hotio/caddy
           - /<host_folder_config>:/config
     ```
 
-!!! info
-
-    Included modules: [caddy-dns/cloudflare](https://github.com/caddy-dns/cloudflare){ target="_blank" rel="noopener" }, [mholt/caddy-ratelimit](https://github.com/mholt/caddy-ratelimit){ target="_blank" rel="noopener" }. The default config only allows access from private ip ranges.
-
 ## Custom build
 
-If you set the environment variable `CUSTOM_BUILD` to a file location like for example `/config/caddy_linux_amd64_custom`, an attempt is made to start Caddy with that binary. The custom build can be obtained from the Caddy [download](https://caddyserver.com/download){ target="_blank" rel="noopener" } page. This is particularly useful if you need extra modules.
+If you set the environment variable `CUSTOM_BUILD` to a file location like for example `/config/caddy_linux_amd64_custom`, an attempt is made to start Caddy with that binary. The custom build can be obtained from the Caddy [download](https://caddyserver.com/download){: target=\_blank rel="noopener" } page. This is particularly useful if you need extra modules.
 
 --8<-- "includes/wireguard.md"

@@ -1,17 +1,23 @@
 ---
 hide:
   - toc
-title: hotio/qbittorrent
+title: engels74/qbittorrent
 ---
 
-[:octicons-mark-github-16: GitHub](https://github.com/hotio/qbittorrent){ class="header-links" target="_blank" rel="noopener" }  
-[:octicons-container-16: ghcr.io](https://github.com/orgs/hotio/packages/container/package/qbittorrent){ class="header-links" target="_blank" rel="noopener" }  
+[:octicons-mark-github-16: GitHub](https://github.com/engels74/qbittorrent){ class="header-links" target="_blank" rel="noopener" }
+[:octicons-container-16: ghcr.io](https://github.com/orgs/engels74/packages/container/package/qbittorrent){ class="header-links" target="_blank" rel="noopener" }
 
-[:octicons-link-16: Upstream Project](https://github.com/qbittorrent/qbittorrent){ class="header-links" target="_blank" rel="noopener" }  
+[:octicons-link-16: Upstream Project](https://github.com/qbittorrent/qbittorrent){ class="header-links" target="_blank" rel="noopener" }
 
-!!! warning "Don't be stupid!"
+<div class="image-logo"><img src="/img/image-logos/qbittorrent.svg" alt="logo"></div>
 
-    Don't be stupid like this guy from [apogliaghi.com](https://apogliaghi.com/2025/09/crypto-miner-in-hotio/qbittorrent)! I'm not bundling a cryptominer. If you want to play sysadmin, know what you are doing! It's fairly well known that if you expose qBittorrent (or other software) to the world, that there's a chance you're gonna get pwned. Certainly if you keep running old versions (I'm not gonna bother checking how old his digest sha actually is, EDIT: sha is recent, but in his article no mention about how long or what version he had running in the past). All sourcecode is visible on GitHub and verifiable by anyone. The screenshotted oneliner from discord without any context can also be searched for in my discord server if you wanna read the context. The sad part here is that the incompetent person throwing false accusations around is probably seen by his family as the smart nephew that knows everything about computers. RIP The Family! See this article on [torrentfreak.com](https://torrentfreak.com/qbittorrent-web-ui-exploited-to-mine-cryptocurrency-heres-how-to-fix-230902/) for more info on how you could get pwned. He's not the first one and sadly he's not going to be the last victim, but atleast man up and own your mistake!
+!!! question "What is this?"
+
+    This is a fork of Hotio's [qBittorrent](https://hotio.dev/containers/qbittorrent) Docker image, that uses [libtorrent v2.x](https://github.com/userdocs/qbittorrent-nox-static/releases) by default.
+
+    Hotio [recently](https://github.com/hotio/qbittorrent/commit/e8dada05befebf51d73669a05b09ef046c6f69e6) added the option to define by ENV if you want to use libtorrent v1 or v2. This one uses `v2` by default.
+
+    This also still includes VueTorrent in the image, as hotio also removed support for themes.
 
 <div id="tags-table">
   <table>
@@ -24,9 +30,8 @@ title: hotio/qbittorrent
       </tr>
     </thead>
     <tbody id="tags-table-body">
-<tr><td><div id="tag21810" onclick="CopyToClipboard('tag21810');return false;" class="tag-decoration">legacy</div><div id="tag16453" onclick="CopyToClipboard('tag16453');return false;" class="tag-decoration">legacy-4.3.9</div><div id="tag22806" onclick="CopyToClipboard('tag22806');return false;" class="tag-decoration">legacy-097e659</div><div id="tag21011" onclick="CopyToClipboard('tag21011');return false;" class="tag-decoration">legacy-v4</div><div id="tag20576" onclick="CopyToClipboard('tag20576');return false;" class="tag-decoration">legacy-v4.3</div><div id="tag31769" onclick="CopyToClipboard('tag31769');return false;" class="tag-decoration">legacy-v4.3.9</div></td><td>Fixed to v4.3.9</td><td><a href="https://github.com/hotio/qbittorrent/commit/097e6592e899370fab55994094bb09f1ccaa896f" target="_blank">Upstream update: alpinevpn-0904450 => alpinevpn-5b650ae</a></td><td><a href="https://github.com/hotio/qbittorrent/actions/runs/20892088053" target="_blank">2026-01-11 08:19:47</a></td></tr>
-<tr><td><div class="tag-decoration-latest">latest</div><div id="tag7054" onclick="CopyToClipboard('tag7054');return false;" class="tag-decoration">release</div><div id="tag12304" onclick="CopyToClipboard('tag12304');return false;" class="tag-decoration">release-5.1.4</div><div id="tag27707" onclick="CopyToClipboard('tag27707');return false;" class="tag-decoration">release-29522ad</div><div id="tag29517" onclick="CopyToClipboard('tag29517');return false;" class="tag-decoration">release-v5</div><div id="tag25058" onclick="CopyToClipboard('tag25058');return false;" class="tag-decoration">release-v5.1</div><div id="tag18375" onclick="CopyToClipboard('tag18375');return false;" class="tag-decoration">release-v5.1.4</div></td><td>Releases</td><td><a href="https://github.com/hotio/qbittorrent/commit/29522ade69d416b4ff9e6acbcbb4c6cab74af75e" target="_blank">Upstream update: alpinevpn-0904450 => alpinevpn-5b650ae</a></td><td><a href="https://github.com/hotio/qbittorrent/actions/runs/20892088096" target="_blank">2026-01-11 08:19:48</a></td></tr>
-</tbody>
+<tr><td><div class="tag-decoration-latest">latest</div><div id="tag5001" onclick="CopyToClipboard('tag5001');return false;" class="tag-decoration">release</div></td><td>Releases</td><td><a href="https://github.com/engels74/qbittorrent/commits/release" target="_blank">View commits</a></td><td><a href="https://github.com/engels74/qbittorrent/actions" target="_blank">View builds</a></td></tr>
+    </tbody>
   </table>
 </div>
 
@@ -36,17 +41,17 @@ title: hotio/qbittorrent
 
     ```shell linenums="1"
     docker run --rm \
-        --name="qbittorrent" \
+        --name qbittorrent \
         -p 8080:8080 \
         -e PUID=1000 \
         -e PGID=1000 \
         -e UMASK=002 \
         -e TZ="Etc/UTC" \
-        -e WEBUI_PORTS="8080/tcp" \
-        -e LIBTORRENT="v1" \
+        -e WEBUI_PORTS="8080/tcp,8080/udp" \
+        -e LIBTORRENT="v2" \
         -v /<host_folder_config>:/config \
         -v /<host_folder_data>:/data \
-        ghcr.io/hotio/qbittorrent
+        ghcr.io/engels74/qbittorrent
     ```
 
 === "compose"
@@ -55,7 +60,7 @@ title: hotio/qbittorrent
     services:
       qbittorrent:
         container_name: qbittorrent
-        image: ghcr.io/hotio/qbittorrent
+        image: ghcr.io/engels74/qbittorrent
         ports:
           - "8080:8080"
         environment:
@@ -63,11 +68,15 @@ title: hotio/qbittorrent
           - PGID=1000
           - UMASK=002
           - TZ=Etc/UTC
-          - WEBUI_PORTS=8080/tcp
-          - LIBTORRENT=v1
+          - WEBUI_PORTS=8080/tcp,8080/udp
+          - LIBTORRENT=v2
         volumes:
           - /<host_folder_config>:/config
           - /<host_folder_data>:/data
     ```
+
+## Alternative Web UI
+
+This image comes bundled with the alternative Web UI [VueTorrent](https://github.com/VueTorrent/VueTorrent) (`/app/vuetorrent`). Nightwalker is removed, as it is no longer maintained.
 
 --8<-- "includes/wireguard.md"
